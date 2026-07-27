@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Mundo de las Flores</title>
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2438467793316618');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2438467793316618&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fcf9f2; color: #2d2d2d; line-height: 1.7; }
+    h1, h2, h3 { font-weight: 300; letter-spacing: 1px; }
+    img { max-width: 100%; height: auto; display: block; }
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(255,182,193,0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,218,185,0.3) 0%, transparent 50%), radial-gradient(circle at 50% 80%, rgba(216,191,216,0.3) 0%, transparent 50%); }
+    .hero-content { position: relative; z-index: 1; padding: 2rem; }
+    .hero h1 { font-size: 4.5rem; margin-bottom: 0.5rem; background: linear-gradient(135deg, #c0392b, #8e44ad, #2980b9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero p { font-size: 1.4rem; color: #666; max-width: 600px; margin: 0 auto; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #eee; padding: 1rem 0; }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: #555; font-weight: 500; font-size: 1rem; transition: color 0.3s; padding: 0.3rem 0.8rem; border-radius: 20px; }
+    nav a:hover { color: #c0392b; background: #fce4e4; }
+    section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #2d2d2d; }
+    .section-subtitle { text-align: center; color: #888; margin-bottom: 3rem; font-size: 1.1rem; }
+    .divider { width: 60px; height: 3px; background: linear-gradient(90deg, #c0392b, #8e44ad); margin: 0 auto 2rem; border-radius: 2px; }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .intro-text p { margin-bottom: 1.2rem; color: #555; font-size: 1.08rem; }
+    .intro-image { width: 100%; border-radius: 20px; overflow: hidden; }
+    .intro-image img { width: 100%; height: 400px; object-fit: cover; border-radius: 20px; }
+    .anatomy-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .anatomy-card { background: white; padding: 2rem 1.5rem; border-radius: 16px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; }
+    .anatomy-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    .anatomy-card .icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+    .anatomy-card h3 { margin-bottom: 0.5rem; color: #2d2d2d; }
+    .anatomy-card p { color: #777; font-size: 0.95rem; }
+    .country-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .country-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; }
+    .country-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+    .country-img-wrap { height: 300px; overflow: hidden; }
+    .country-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .country-info { padding: 1.5rem; }
+    .country-info h3 { margin-bottom: 0.3rem; }
+    .country-info .flower-name { color: #c0392b; font-style: italic; margin-bottom: 0.8rem; display: block; }
+    .country-info p { color: #666; font-size: 0.95rem; }
+    .beauty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
+    .beauty-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: transform 0.3s; }
+    .beauty-card:hover { transform: translateY(-8px); }
+    .beauty-img { height: 250px; overflow: hidden; }
+    .beauty-img img { width: 100%; height: 100%; object-fit: cover; }
+    .beauty-body { padding: 1.8rem; }
+    .beauty-body h3 { margin-bottom: 0.5rem; font-size: 1.3rem; }
+    .beauty-body .latin { color: #aaa; font-style: italic; font-size: 0.9rem; margin-bottom: 0.8rem; display: block; }
+    .beauty-body p { color: #666; font-size: 0.95rem; }
+    footer { background: #2d2d2d; color: #ccc; text-align: center; padding: 3rem 2rem; }
+    footer p { margin-bottom: 0.5rem; }
+    .secreto { display: none; }
+    .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; z-index: 1000; padding: 1rem; }
+    .modal.open { opacity: 1; visibility: visible; }
+    .modal-content { background: #fff; border-radius: 20px; padding: 2.5rem 2rem; max-width: 400px; width: 100%; text-align: center; transform: scale(0.9); transition: transform 0.3s; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
+    .modal.open .modal-content { transform: scale(1); }
+    .modal-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.8rem; color: #888; cursor: pointer; line-height: 1; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background 0.2s, color 0.2s; }
+    .modal-close:hover { background: #f0f0f0; color: #c0392b; }
+    .modal-content h3 { margin-bottom: 1rem; color: #2d2d2d; font-size: 1.4rem; }
+    .modal-text { color: #555; line-height: 1.8; font-size: 1.05rem; }
+    .modal-author { color: #c0392b; font-style: italic; }
+    @media (max-width: 768px) { .hero h1 { font-size: 2.8rem; } .intro-grid { grid-template-columns: 1fr; } nav ul { gap: 0.8rem; } section { padding: 3rem 1.2rem; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>El Mundo de las Flores</h1>
+      <p>Un viaje a trav&eacute;s de la belleza, el significado y la diversidad floral que engalana nuestro planeta.</p>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#que-son">Qu&eacute; son las flores</a></li>
+      <li><a href="#emblematicas">Flores emblem&aacute;ticas</a></li>
+      <li><a href="#bellas">Las m&aacute;s bellas</a></li>
+    </ul>
+  </nav>
+  <section id="que-son">
+    <h2 class="section-title">&iquest;Qu&eacute; son las flores?</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle">La estructura reproductiva m&aacute;s fascinante de la naturaleza</p>
+    <div class="intro-grid">
+      <div class="intro-text">
+        <p>Las flores son los &oacute;rganos reproductivos de las plantas angiospermas. Su funci&oacute;n principal es la producci&oacute;n de semillas mediante la polinizaci&oacute;n, un proceso que a menudo involucra a insectos, aves, el viento o el agua.</p>
+        <p>M&aacute;s all&aacute; de su funci&oacute;n biol&oacute;gica, las flores han cautivado a la humanidad desde tiempos ancestrales. Son s&iacute;mbolo de amor, amistad, pureza, vida y tambi&eacute;n de luto. Cada cultura les ha otorgado significados &uacute;nicos, creando un lenguaje secreto que trasciende las palabras: la floriograf&iacute;a.</p>
+        <p>Se estima que existen m&aacute;s de 400,000 especies de plantas con flor en el mundo, adaptadas a pr&aacute;cticamente todos los ecosistemas del planeta, desde los desiertos m&aacute;s &aacute;ridos hasta las selvas tropicales m&aacute;s h&uacute;medas.</p>
+      </div>
+      <div class="intro-image">
+        <img src="https://images.unsplash.com/photo-1496062031456-07b8f162a322?w=800&h=600&fit=crop&auto=format" alt="Flor roja">
+      </div>
+    </div>
+    <h3 style="text-align:center; margin-top: 4rem; color:#555; font-weight:400;">Partes de una flor</h3>
+    <div class="anatomy-cards">
+      <div class="anatomy-card"><div class="icon">&#x1F343;</div><h3>P&eacute;talos</h3><p>Hojas modificadas y coloridas que atraen polinizadores. Su forma y color var&iacute;an seg&uacute;n la especie.</p></div>
+      <div class="anatomy-card"><div class="icon">&#x1F331;</div><h3>S&eacute;palos</h3><p>Estructuras verdes que protegen el capullo floral antes de que se abra. Forman el c&aacute;liz.</p></div>
+      <div class="anatomy-card"><div class="icon">&#x1F338;</div><h3>Estambre</h3><p>&Oacute;rgano masculino que produce el polen. Consta de antera y filamento.</p></div>
+      <div class="anatomy-card"><div class="icon">&#x1F33C;</div><h3>Pistilo</h3><p>&Oacute;rgano femenino que recibe el polen. Contiene el ovario, estilo y estigma.</p></div>
+    </div>
+  </section>
+  <section id="emblematicas" style="background:#f8f4ee; border-radius: 40px; padding: 5rem 2rem;">
+    <h2 class="section-title">Flores emblem&aacute;ticas de cada pa&iacute;s</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle">S&iacute;mbolos nacionales que representan la identidad y el esp&iacute;ritu de cada naci&oacute;n</p>
+    <div class="country-grid">
+      <div class="country-card"><div class="country-img-wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlWAPJhTgGL5IatUJomY4m6D5DXTOlDh3iEYsmtMs75g&s=10" alt="Ceibo"></div><div class="country-info"><h3>Argentina</h3><span class="flower-name">Ceibo (<i>Erythrina crista-galli</i>)</span><p>Declarada flor nacional en 1942. Sus flores rojas y vibrantes adornan las riberas del Paran&aacute; y el R&iacute;o de la Plata.</p></div></div>
+      <div class="country-card"><div class="country-img-wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7jREBIVuOrTtOIBshsgNa7y41ltAfJRhaIOlCjNOK4g&s=10" alt="Flores amarillas"></div><div class="country-info"><h3>Brasil</h3><span class="flower-name">Ip&ecirc;-amarelo (<i>Handroanthus chrysotrichus</i>)</span><p>&Aacute;rbol de flores amarillas que florece en invierno, considerado un s&iacute;mbolo nacional no oficial pero profundamente querido.</p></div></div>
+      <div class="country-card"><div class="country-img-wrap"><img src="https://images.unsplash.com/photo-1770295368339-9301317ceee8?w=600&h=400&fit=crop&auto=format" alt="Ciruelo en flor"></div><div class="country-info"><h3>China</h3><span class="flower-name">Ciruelo en flor (<i>Prunus mume</i>)</span><p>Simboliza la perseverancia y la esperanza. Florece en pleno invierno, desafiando el fr&iacute;o, y es celebrado en la poes&iacute;a china.</p></div></div>
+      <div class="country-card"><div class="country-img-wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn6e4y_9B6vzGtJ-Yn3rhijHm9DW5sEP9q2X87YDxhQw&s=10" alt="Clavel"></div><div class="country-info"><h3>Espa&ntilde;a</h3><span class="flower-name">Clavel (<i>Dianthus caryophyllus</i>)</span><p>Considerada la flor nacional. Aparece en la tradici&oacute;n flamenca, las corridas de toros y las fiestas populares.</p></div></div>
+      <div class="country-card"><div class="country-img-wrap"><img src="https://images.unsplash.com/photo-1748615745871-7172b3d2a7cb?w=600&h=400&fit=crop&auto=format" alt="Lirio"></div><div class="country-info"><h3>Francia</h3><span class="flower-name">Lirio (<i>Iris</i>)</span><p>La flor de lis es un emblema hist&oacute;rico de la monarqu&iacute;a francesa y del pa&iacute;s, asociada a la pureza y la realeza.</p></div></div>
+      <div class="country-card"><div class="country-img-wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjWbTy1Wld5OVtm7_N4y8kMdG_oOMikjANniPHxII2Ng&s=10" alt="Dalia"></div><div class="country-info"><h3>M&eacute;xico</h3><span class="flower-name">Dal&iacute;a (<i>Dahlia pinnata</i>)</span><p>Flor nacional desde 1963. Originaria de M&eacute;xico, los aztecas la llamaban <i>xicamiti</i> y la usaban con fines ornamentales y medicinales.</p></div></div>
+      <div class="country-card"><div class="country-img-wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmWvH3TD5UoFHc4hwxGLzR3sFkoMz72ZlYJVpe5P87Pw&s=10" alt="Cantuta"></div><div class="country-info"><h3>Per&uacute;</h3><span class="flower-name">Cantuta (<i>Cantua buxifolia</i>)</span><p>Flor sagrada de los incas, conocida como &quot;la flor de los incas&quot;. Crece en los Andes y sus colores representan la dualidad.</p></div></div>
+      <div class="country-card"><div class="country-img-wrap"><img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=600&h=400&fit=crop&auto=format" alt="Rosa"></div><div class="country-info"><h3>Reino Unido</h3><span class="flower-name">Rosa Tudor (<i>Rosa</i>)</span><p>La rosa es el emblema nacional de Inglaterra. La rosa Tudor combina la rosa blanca de York y la roja de Lancaster.</p></div></div>
+      <div class="country-card"><div class="country-img-wrap"><img src="https://images.unsplash.com/photo-1623860485657-b90f0289588b?w=600&h=400&fit=crop&auto=format" alt="Amapola"></div><div class="country-info"><h3>Polonia</h3><span class="flower-name">Amapola (<i>Papaver rhoeas</i>)</span><p>La amapola roja es un s&iacute;mbolo nacional que representa el sacrificio y la memoria de los ca&iacute;dos en guerra.</p></div></div>
+    </div>
+  </section>
+  <section id="bellas">
+    <h2 class="section-title">Las flores m&aacute;s bellas del mundo</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle">Una selecci&oacute;n de las especies m&aacute;s admiradas por su color, forma y rareza</p>
+    <div class="beauty-grid">
+      <div class="beauty-card"><div class="beauty-img"><img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=600&h=400&fit=crop&auto=format" alt="Rosa"></div><div class="beauty-body"><h3>Rosa</h3><span class="latin">Rosa &times; hybrida</span><p>Considerada la reina de las flores. Con m&aacute;s de 30,000 variedades, su aroma y belleza la convierten en la flor m&aacute;s popular del mundo.</p></div></div>
+      <div class="beauty-card"><div class="beauty-img"><img src="https://images.unsplash.com/photo-1553106365-765fb5907c08?w=600&h=400&fit=crop&auto=format" alt="Orquidea"></div><div class="beauty-body"><h3>Orqu&iacute;dea</h3><span class="latin">Orchidaceae</span><p>Una de las familias m&aacute;s grandes del reino vegetal (m&aacute;s de 25,000 especies). Sus formas ex&oacute;ticas y colores hipnotizan a coleccionistas.</p></div></div>
+      <div class="beauty-card"><div class="beauty-img"><img src="https://images.unsplash.com/photo-1555750287-affefd650a40?w=600&h=400&fit=crop&auto=format" alt="Sakura"></div><div class="beauty-body"><h3>Flor de cerezo (Sakura)</h3><span class="latin">Prunus serrulata</span><p>S&iacute;mbolo del Jap&oacute;n. Su floraci&oacute;n ef&iacute;mera (hanami) representa la belleza transitoria de la vida. Cada primavera atrae a millones.</p></div></div>
+      <div class="beauty-card"><div class="beauty-img"><img src="https://images.unsplash.com/photo-1538998073820-4dfa76300194?w=600&h=400&fit=crop&auto=format" alt="Loto"></div><div class="beauty-body"><h3>Loto</h3><span class="latin">Nelumbo nucifera</span><p>Sagrada en el budismo e hinduismo. Crece en aguas turbias pero emerge inmaculada, simbolizando la pureza espiritual y la iluminaci&oacute;n.</p></div></div>
+      <div class="beauty-card"><div class="beauty-img"><img src="https://images.unsplash.com/photo-1516616202074-ce6bf64eade2?w=600&h=400&fit=crop&auto=format" alt="Tulipan"></div><div class="beauty-body"><h3>Tulip&aacute;n</h3><span class="latin">Tulipa</span><p>Protagonista de la &quot;tulipoman&iacute;a&quot; holandesa del siglo XVII. Sus formas geom&eacute;tricas y colores vibrantes la hacen inconfundible.</p></div></div>
+      <div class="beauty-card"><div class="beauty-img"><img src="https://images.unsplash.com/photo-1470509037663-253afd7f0f51?w=600&h=400&fit=crop&auto=format" alt="Girasol"></div><div class="beauty-body"><h3>Girasol</h3><span class="latin">Helianthus annuus</span><p>Su nombre viene de su heliotropismo: sigue al sol durante el d&iacute;a. S&iacute;mbolo de alegr&iacute;a, lealtad y admiraci&oacute;n.</p></div></div>
+      <div class="beauty-card"><div class="beauty-img"><img src="https://images.unsplash.com/photo-1706886979801-3b1c26d143e3?w=600&h=400&fit=crop&auto=format" alt="Peonia"></div><div class="beauty-body"><h3>Peon&iacute;a</h3><span class="latin">Paeonia</span><p>Conocida como &quot;la rosa sin espinas&quot;. En China es considerada la flor de la riqueza y el honor. Sus p&eacute;talos voluptuosos enamoran.</p></div></div>
+      <div class="beauty-card"><div class="beauty-img"><img src="https://images.unsplash.com/photo-1559234943-5cd1154a8d5b?w=600&h=400&fit=crop&auto=format" alt="Jazmin"></div><div class="beauty-body"><h3>Jazm&iacute;n</h3><span class="latin">Jasminum</span><p>Su aroma dulce e inconfundible la convierte en la favorita de la perfumer&iacute;a. Florece de noche y simboliza la sensualidad.</p></div></div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2026 El Mundo de las Flores &mdash; Un homenaje a la belleza natural</p>
+    <p style="font-size:0.85rem; color:#888;">Hecho con &hearts; para los amantes de las flores</p>
+    <p class="secreto">Se como los girasoles, siempre buscando el sol para brillar. &mdash; Ty.</p>
+  </footer>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar">&times;</button>
+      <h3 id="modal-title">Mensaje secreto</h3>
+      <p class="modal-text">Se como los girasoles, siempre buscando el sol para brillar. <span class="modal-author">&mdash; Ty.</span></p>
+      <p class="modal-text">Ninguna de estas flores se comparar&aacute; con tu belleza. <span class="modal-author">&mdash; Ty.</span></p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const footer = document.querySelector('footer');
+    const closeBtn = document.querySelector('.modal-close');
+
+    footer.style.cursor = 'pointer';
+    footer.addEventListener('click', () => modal.classList.add('open'));
+    closeBtn.addEventListener('click', (e) => { e.stopPropagation(); modal.classList.remove('open'); });
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('open'); });
+  </script>
+</body>
+</html>
