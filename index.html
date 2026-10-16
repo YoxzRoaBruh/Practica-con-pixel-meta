@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Mundo de las Flores</title>
+  <!-- Google Tag Manager -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'site_initialized', page_title: document.title });
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MRC4J7XD');
+  </script>
   <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -83,6 +93,10 @@ src="https://www.facebook.com/tr?id=2438467793316618&ev=PageView&noscript=1"
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRC4J7XD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="hero">
     <div class="hero-content">
       <h1>El Mundo de las Flores</h1>
@@ -170,10 +184,41 @@ src="https://www.facebook.com/tr?id=2438467793316618&ev=PageView&noscript=1"
     const closeBtn = document.querySelector('.modal-close');
 
     footer.style.cursor = 'pointer';
-    footer.addEventListener('click', () => modal.classList.add('open'));
+    footer.addEventListener('click', () => {
+      modal.classList.add('open');
+      window.dataLayer.push({ event: 'secret_message_open', content_name: 'Mensaje secreto' });
+      if (typeof window.fbq === 'function') fbq('trackCustom', 'SecretMessageOpen');
+    });
     closeBtn.addEventListener('click', (e) => { e.stopPropagation(); modal.classList.remove('open'); });
     modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('open'); });
+
+    document.querySelectorAll('nav a').forEach((link) => {
+      link.addEventListener('click', () => {
+        const section = document.querySelector(link.getAttribute('href'));
+        window.dataLayer.push({
+          event: 'content_navigation',
+          content_section: section ? section.id : link.getAttribute('href').slice(1),
+          link_text: link.textContent.trim()
+        });
+      });
+    });
+
+    if ('IntersectionObserver' in window) {
+      const viewedSections = new Set();
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !viewedSections.has(entry.target.id)) {
+            viewedSections.add(entry.target.id);
+            window.dataLayer.push({ event: 'section_view', section_id: entry.target.id });
+            if (typeof window.fbq === 'function') {
+              fbq('track', 'ViewContent', { content_name: entry.target.id });
+            }
+          }
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('main section, body > section').forEach((section) => sectionObserver.observe(section));
+    }
   </script>
 </body>
 </html>
